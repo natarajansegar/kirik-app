@@ -180,6 +180,40 @@
   footer a:hover { color: white; }
   footer .footer-links { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; margin-bottom: 16px; }
 
+
+  /* ── Built With ── */
+  .builtwith { background: #1A1F2E; }
+  .builtwith .section-label { color: #6C9BD2; }
+  .builtwith .section-title { color: white; }
+  .bw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .bw-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(108,155,210,0.15);
+    border-radius: 14px; padding: 22px;
+    transition: border-color .2s;
+  }
+  .bw-card:hover { border-color: rgba(108,155,210,0.4); }
+  .bw-card-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: #6C9BD2;
+    margin-bottom: 14px;
+  }
+  .bw-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .bw-pill {
+    font-size: 11px; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; padding: 5px 12px;
+    border-radius: 4px; border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.45);
+  }
+  .bw-pill.blue  { border-color: rgba(108,155,210,0.45); color: #6C9BD2; }
+  .bw-pill.pink  { border-color: rgba(255,143,171,0.45); color: #FF8FAB; }
+  .bw-pill.yellow{ border-color: rgba(255,209,102,0.45); color: #FFD166; }
+  .bw-pill.green { border-color: rgba(132,197,163,0.45); color: #84C5A3; }
+
   @media (max-width: 600px) {
     .nav-links { display: none; }
     .hero { padding: 60px 20px 56px; }
@@ -192,10 +226,12 @@
 <nav>
   <a class="nav-logo" href="#">🎨 Kirik</a>
   <ul class="nav-links">
-    <li><a href="#features">Features</a></li>
+    <li><a href="#features">Features</a>
+    <a href="#stack">Stack</a></li>
     <li><a href="#languages">Languages</a></li>
     <li><a href="#support">Support</a></li>
     <li><a href="#faq">FAQ</a></li>
+    <li><a href="#stack">Stack</a></li>
   </ul>
 </nav>
 
@@ -289,12 +325,12 @@
       <div class="support-card">
         <h3>📧 Email Support</h3>
         <p>Send us an email and we'll get back to you within 24 hours.</p>
-        <a class="support-link" href="mailto:support@kirik.me">support@kirik.me</a>
+        <a class="support-link" href="mailto:hello@leolabs.cc">hello@leolabs.cc</a>
       </div>
       <div class="support-card">
         <h3>📄 Privacy Policy</h3>
         <p>Read how we handle your data, your rights, and how to request deletion.</p>
-        <a class="support-link green" href="https://kirik.me/privacy_policy.html">Read Privacy Policy</a>
+        <a class="support-link green" href="https://kirik.leolabs.cc/privacy_policy.html">Read Privacy Policy</a>
       </div>
       <div class="support-card">
         <h3>🗑️ Delete Your Account</h3>
@@ -333,7 +369,7 @@
       </div>
       <div class="faq-item">
         <h4>How do I delete my account and data?</h4>
-        <p>Go to Profile → Settings → Delete Account. All your data will be permanently deleted within 30 days. You can also email us at support@kirik.me.</p>
+        <p>Go to Profile → Settings → Delete Account. All your data will be permanently deleted within 30 days. You can also email us at hello@leolabs.cc.</p>
       </div>
       <div class="faq-item">
         <h4>Is Kirik free?</h4>
@@ -343,15 +379,90 @@
   </div>
 </section>
 
+<!-- Built With -->
+<section class="builtwith" id="stack">
+  <div class="section-inner">
+    <p class="section-label">Under the hood</p>
+    <h2 class="section-title" style="margin-bottom:12px;">Built with</h2>
+    <p style="color:rgba(255,255,255,0.45);font-size:15px;margin-bottom:40px;max-width:520px;">
+      One developer. Full-stack — from Flutter canvas to WebSocket server.
+    </p>
+    <div class="bw-grid">
+
+      <div class="bw-card">
+        <div class="bw-card-label">📱 Mobile</div>
+        <div class="bw-pills">
+          <span class="bw-pill blue">Flutter</span>
+          <span class="bw-pill blue">Dart</span>
+          <span class="bw-pill">CustomPainter</span>
+          <span class="bw-pill">WebRTC</span>
+        </div>
+      </div>
+
+      <div class="bw-card">
+        <div class="bw-card-label">⚡ Real-time Backend</div>
+        <div class="bw-pills">
+          <span class="bw-pill pink">Node.js</span>
+          <span class="bw-pill pink">Socket.IO</span>
+          <span class="bw-pill pink">TypeScript</span>
+          <span class="bw-pill">WebSockets</span>
+        </div>
+      </div>
+
+      <div class="bw-card">
+        <div class="bw-card-label">🗄️ State & Storage</div>
+        <div class="bw-pills">
+          <span class="bw-pill yellow">Redis</span>
+          <span class="bw-pill">Room Engine</span>
+          <span class="bw-pill">Game State</span>
+        </div>
+      </div>
+
+      <div class="bw-card">
+        <div class="bw-card-label">🔔 Services</div>
+        <div class="bw-pills">
+          <span class="bw-pill green">Firebase</span>
+          <span class="bw-pill green">FCM Push</span>
+          <span class="bw-pill">Google OAuth</span>
+        </div>
+      </div>
+
+      <div class="bw-card">
+        <div class="bw-card-label">🌍 Infra</div>
+        <div class="bw-pills">
+          <span class="bw-pill blue">Hetzner</span>
+          <span class="bw-pill blue">Cloudflare</span>
+          <span class="bw-pill">Nginx</span>
+          <span class="bw-pill">PM2</span>
+          <span class="bw-pill">Let's Encrypt</span>
+        </div>
+      </div>
+
+      <div class="bw-card">
+        <div class="bw-card-label">🌐 5 Languages</div>
+        <div class="bw-pills">
+          <span class="bw-pill">🇬🇧 English</span>
+          <span class="bw-pill">🇫🇷 Français</span>
+          <span class="bw-pill">🇪🇸 Español</span>
+          <span class="bw-pill">🇩🇪 Deutsch</span>
+          <span class="bw-pill">🇮🇳 தமிழ்</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
   <div class="footer-links">
     <a href="#features">Features</a>
+    <a href="#stack">Stack</a>
     <a href="#support">Support</a>
-    <a href="https://kirik.me/privacy_policy.html">Privacy Policy</a>
-    <a href="mailto:support@kirik.me">Contact</a>
+    <a href="https://kirik.leolabs.cc/privacy_policy.html">Privacy Policy</a>
+    <a href="mailto:hello@leolabs.cc">Contact</a>
   </div>
-  <p>© 2025 Kirik · Made with ❤️ · <a href="mailto:support@kirik.me">support@kirik.me</a></p>
+  <p>© 2026 Kirik · <a href="https://leolabs.cc">LeoLabs</a> · Made with ❤️ · <a href="mailto:hello@leolabs.cc">hello@leolabs.cc</a></p>
 </footer>
 
 </body>
