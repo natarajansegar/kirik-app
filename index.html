@@ -95,7 +95,7 @@
   .section-inner { max-width: 1000px; margin: 0 auto; }
   .section-label {
     font-size: 12px; font-weight: 700; letter-spacing: 2px;
-    color: var(--primary); text-transform: uppercase;
+    color: #3a6db5; text-transform: uppercase;
     margin-bottom: 8px;
   }
   .section-title {
@@ -182,17 +182,17 @@
 
 
   /* ── Built With ── */
-  .builtwith { background: #1A1F2E; }
-  .builtwith .section-label { color: #6C9BD2; }
-  .builtwith .section-title { color: white; }
+  .builtwith { background: linear-gradient(180deg, #e8f1fb 0%, #ddeaf8 100%); border-top: 1px solid rgba(108,155,210,0.2); border-bottom: 1px solid rgba(108,155,210,0.2); }
+  .builtwith .section-label { color: var(--primary); }
+  .builtwith .section-title { color: var(--text); }
   .bw-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 16px;
   }
   .bw-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(108,155,210,0.15);
+    background: white;
+    border: 1px solid rgba(108,155,210,0.2);
     border-radius: 14px; padding: 22px;
     transition: border-color .2s;
   }
@@ -206,13 +206,13 @@
   .bw-pill {
     font-size: 11px; font-weight: 600; letter-spacing: 1px;
     text-transform: uppercase; padding: 5px 12px;
-    border-radius: 4px; border: 1px solid rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.45);
+    border-radius: 4px; border: 1px solid rgba(108,155,210,0.25);
+    color: #4a6080;
   }
-  .bw-pill.blue  { border-color: rgba(108,155,210,0.45); color: #6C9BD2; }
-  .bw-pill.pink  { border-color: rgba(255,143,171,0.45); color: #FF8FAB; }
-  .bw-pill.yellow{ border-color: rgba(255,209,102,0.45); color: #FFD166; }
-  .bw-pill.green { border-color: rgba(132,197,163,0.45); color: #84C5A3; }
+  .bw-pill.blue  { border-color: rgba(74,124,199,0.5); color: #3a6db5; }
+  .bw-pill.pink  { border-color: rgba(200,80,110,0.4); color: #c0405a; }
+  .bw-pill.yellow{ border-color: rgba(180,130,0,0.4);  color: #9a7000; }
+  .bw-pill.green { border-color: rgba(60,150,100,0.4);  color: #2e8060; }
 
   @media (max-width: 600px) {
     .nav-links { display: none; }
@@ -226,12 +226,11 @@
 <nav>
   <a class="nav-logo" href="#">🎨 Kirik</a>
   <ul class="nav-links">
-    <li><a href="#features">Features</a>
-    <a href="#stack">Stack</a></li>
+    <li><a href="#features">Features</a></li>
     <li><a href="#languages">Languages</a></li>
+    <li><a href="#stack">Stack</a></li>
     <li><a href="#support">Support</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#stack">Stack</a></li>
   </ul>
 </nav>
 
@@ -341,44 +340,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" style="background: var(--bg);">
-  <div class="section-inner">
-    <p class="section-label">FAQ</p>
-    <h2 class="section-title">Frequently asked questions</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <h4>How do I create a room?</h4>
-        <p>Tap "Create Room" on the main menu, choose your settings (players, rounds, language, difficulty) and tap Create. Share the room code with friends.</p>
-      </div>
-      <div class="faq-item">
-        <h4>How do I join a friend's game?</h4>
-        <p>Tap "Join Room" and enter the 6-character room code. You can also tap a kirik.me/join/CODE link to open the game directly.</p>
-      </div>
-      <div class="faq-item">
-        <h4>The app shows "Connection failed" when creating a room</h4>
-        <p>Check your internet connection and try again. If the problem persists, close the app completely, reopen it, and try again from the main menu.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Voice chat isn't working</h4>
-        <p>Make sure you've granted microphone permission to Kirik in your device Settings app. Then tap the Voice button in-game to activate it.</p>
-      </div>
-      <div class="faq-item">
-        <h4>How do I report a player?</h4>
-        <p>Tap the flag icon next to a player's name during the game to submit a report. Our team reviews all reports.</p>
-      </div>
-      <div class="faq-item">
-        <h4>How do I delete my account and data?</h4>
-        <p>Go to Profile → Settings → Delete Account. All your data will be permanently deleted within 30 days. You can also email us at hello@leolabs.cc.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Is Kirik free?</h4>
-        <p>Yes — Kirik is completely free to play with no ads. All features including voice chat, leaderboards, and 5 languages are free.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Built With -->
 <section class="builtwith" id="stack">
   <div class="section-inner">
@@ -453,10 +414,49 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section id="faq" style="background: white;">
+  <div class="section-inner">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-title">Frequently asked questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h4>How do I create a room?</h4>
+        <p>Tap "Create Room" on the main menu, choose your settings (players, rounds, language, difficulty) and tap Create. Share the room code with friends.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I join a friend's game?</h4>
+        <p>Tap "Join Room" and enter the 6-character room code. You can also tap a kirik.me/join/CODE link to open the game directly.</p>
+      </div>
+      <div class="faq-item">
+        <h4>The app shows "Connection failed" when creating a room</h4>
+        <p>Check your internet connection and try again. If the problem persists, close the app completely, reopen it, and try again from the main menu.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Voice chat isn't working</h4>
+        <p>Make sure you've granted microphone permission to Kirik in your device Settings app. Then tap the Voice button in-game to activate it.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I report a player?</h4>
+        <p>Tap the flag icon next to a player's name during the game to submit a report. Our team reviews all reports.</p>
+      </div>
+      <div class="faq-item">
+        <h4>How do I delete my account and data?</h4>
+        <p>Go to Profile → Settings → Delete Account. All your data will be permanently deleted within 30 days. You can also email us at hello@leolabs.cc.</p>
+      </div>
+      <div class="faq-item">
+        <h4>Is Kirik free?</h4>
+        <p>Yes — Kirik is completely free to play with no ads. All features including voice chat, leaderboards, and 5 languages are free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
   <div class="footer-links">
     <a href="#features">Features</a>
+    <a href="#languages">Languages</a>
     <a href="#stack">Stack</a>
     <a href="#support">Support</a>
     <a href="https://kirik.leolabs.cc/privacy_policy.html">Privacy Policy</a>
